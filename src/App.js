@@ -7,7 +7,7 @@ function App() {
   const [location, setLocation] = useState("");
   const [forecast, setForecast] = useState({});
 
-  const todayURL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=97b9e83229beb43911ee7d7bd37c5441&units=imperial`;
+  const todayURL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`;
 
   const city = (event) => {
     if (event.key === "Enter") {
